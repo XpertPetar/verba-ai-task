@@ -15,7 +15,11 @@ export default function ChatWindow({ messages, onSend }: ChatWindowProps): JSX.E
             ${
                 msg.from === "user"
                     ? "self-end text-white"
-                    : "self-start text-green-400 bg-transparent"
+                    : msg.from === "ai"
+                    ? "self-start text-green-400 bg-transparent"
+                    : msg.from === "error"
+                    ? "self-start text-red-400 bg-transparent"
+                    : ""
             }`}
                         >
                             {msg.text}

@@ -1,4 +1,4 @@
 export type Message = {
-    from: "user" | "ai";
+    from: "user" | "ai" | "error";
     text: string;
 };
